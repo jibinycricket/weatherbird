@@ -10,7 +10,7 @@ var https_options = {
 
 var express = require('express');
 var app = express();
-var port= process.env.port || 3000;
+var port = process.env.PORT || 3000;
 var path = require('path');
 var routes = require ('./routes');
 var env = process.env.NODE_ENV || 'development';
