@@ -1,7 +1,9 @@
 //Routes
 exports.home = function(req, res){
   res.render("home", 
-    { title: 'WeatherBird'}
+    { title: 'WeatherBird',
+      APIKEY: process.env.FORECAST_APIKEY
+    }
   );
 };
 
