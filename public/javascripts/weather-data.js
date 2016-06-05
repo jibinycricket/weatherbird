@@ -6,14 +6,3 @@ if(env === 'production'){
   /* REMOVE AFTER TEST*/
   var APIKEY = "2ebc8b5047823a6fbe879e5bc62a4462";
 }
-
-exports.weatherData = {
-  // greetings.js
-  sayHelloInEnglish = function() {
-    console.log("Hello");
-  };
-
-  sayHelloInSpanish = function() {
-    console.log("Hola");
-  };
-}
