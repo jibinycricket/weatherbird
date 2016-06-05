@@ -23,15 +23,15 @@ app.set('view engine', 'pug'); //Set template to use pug
 
 
 /*Set Server*/
-if(env === 'production'){ 
+//if(env === 'production'){ 
   app.listen(port, function(){
     console.log('HTTP Server is running on port: '+ port);
   });
-}else{
+/*}else{
   https.createServer(https_options, app).listen(port, function(){
     console.log("HTTPS Server is running on port: "+port);
   });
-}
+}*/
 
 //routes
 app.get('/', routes.home);
