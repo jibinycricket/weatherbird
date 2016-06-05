@@ -1,16 +1,15 @@
 var fs = require('fs');
-/*
 var https = require('https');
 var key = fs.readFileSync('./key.pem');
 var cert = fs.readFileSync('./cert.pem');
 var https_options = {
   key: key,
   cert: cert
-};*/
+};
 
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3000;
+var port= process.env.PORT || 3000;
 var path = require('path');
 var routes = require ('./routes');
 var env = process.env.NODE_ENV || 'development';
@@ -24,15 +23,15 @@ app.set('view engine', 'pug'); //Set template to use pug
 
 
 /*Set Server*/
-//if(env === 'production'){ 
+if(env === 'production'){ 
   app.listen(port, function(){
     console.log('HTTP Server is running on port: '+ port);
   });
-/*}else{
+}else{
   https.createServer(https_options, app).listen(port, function(){
-    console.log("HTTPS Server is running on port: "+port);
+    console.log("HTTPS Server is running on port: "+ port);
   });
-}*/
+}
 
 //routes
 app.get('/', routes.home);
