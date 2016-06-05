@@ -12,7 +12,7 @@ var app = express();
 var port= process.env.port || 3000;
 var path = require('path');
 var routes = require ('./routes');
-
+var env = process.env.NODE_ENV || 'development';
 //Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -23,7 +23,7 @@ app.set('view engine', 'pug'); //Set template to use pug
 
 
 /*Set Server*/
-if(process.env === 'production'){ 
+if(env === 'production'){ 
   app.listen(port, function(){
     console.log('HTTP Server is running on port: '+ port);
   });
