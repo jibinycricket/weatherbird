@@ -1,11 +1,12 @@
 var fs = require('fs');
+/*
 var https = require('https');
 var key = fs.readFileSync('./key.pem');
 var cert = fs.readFileSync('./cert.pem');
 var https_options = {
   key: key,
   cert: cert
-};
+};*/
 
 var express = require('express');
 var app = express();
