@@ -20,13 +20,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'pug'); //Set template to use pug
 
 //Set Server using https
-https.createServer(https_options, app).listen(port);
 
-/*Set Server using http
-app.listen(port, function(){
-  console.log('Server is running..');
-});
-*/
+
+/*Set Server*/
+if(process.env === 'production'){ 
+  app.listen(port, function(){
+    console.log('HTTP Server is running on port: '+ port);
+  });
+}else{
+  https.createServer(https_options, app).listen(port, function(){
+    console.log("HTTPS Server is running on port: "+port);
+  });
+}
 
 //routes
 app.get('/', routes.home);
