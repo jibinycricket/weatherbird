@@ -48,16 +48,29 @@ $gradient-1: top, rgba(70,187,173,1) 0%, rgba(84,145,183,1) 30%, rgba(84,145,183
       width: 30px
       padding: 0px
       border-radius: 100%
+      &:hover
+        background-color: rgba(white, .2)
       i
-        margin-top: 8px
+        font-size: 20px
+        margin-top: 5px
   .current-weather
+    color: white
+    opacity: .8
     .current-weather-icon
       text-align: center
       margin-top: 10px
       img
-        width: 150px
-        height: 150px
+        width: 200px
+        height: 200px
+        border-radius: 100%
     .current-temp
+      position: relative
+      top: -30px
+      padding: 0px
+      font-size: 50px
+      font-weight: 600
+      text-align: center
+      display: block
     .high-temp
     .low-temp
 
