@@ -1,13 +1,15 @@
 .weatherapp
   .location-row
     .add-button
+      i.fa.fa-plus
     .location-and-date
-      span.location New Hyde Park, NY
+      span.location NEW HYDE PARK, NY
       span.date Monday, May 20
-    .geolocation-button
-      button.button-primary(onclick = "getWeather()") Get Weather
+    .geolocation-button(onclick="getWeather()")
+      i.fa.fa-map-marker
   .current-weather
-    span.current-weather-icon
+    .current-weather-icon
+      img(src="/images/weather-icons/cloudy.svg")
     span.current-temp
     span.high-temp
     span.low-temp
