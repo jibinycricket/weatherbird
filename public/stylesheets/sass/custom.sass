@@ -1,7 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin:400,600);
 
 $background-color: #ecf0f1
+$gradient-1-base: rgba(70,187,173,1)
+$gradient-1: top, rgba(70,187,173,1) 0%, rgba(84,145,183,1) 30%, rgba(84,145,183,1) 62%, rgba(84,145,183,1) 71%, rgba(88,120,185,1) 87%, rgba(88,120,185,1) 100%
+
+=gradient($gradient, $gradient-base)
+  background: $gradient-base
+  background: -webkit-linear-gradient($gradient-1)
+  background: -o-linear-gradient($gradient-1)
+  background: -linear-gradient($gradient-1)
 
 body
   font-family: 'Cabin', sans-serif
-  background-color: background-color
+  +gradient($gradient-1, $gradient-1-base)
