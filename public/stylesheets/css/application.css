@@ -1,2 +1,6 @@
-@import url(background.css);
-@import url(normalize.css);
+@import url('normalize.css');
+@import url('skeleton.css');
+@import url('custom.css');
+@import url('weatherapp.css');
+
+

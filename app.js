@@ -15,7 +15,6 @@ var port= process.env.PORT || 3000;
 var path = require('path');
 var routes = require ('./routes');
 var env = process.env.NODE_ENV || 'development';
-console.log(process.env.FORECAST_APIKEY);
 
 //Serve static files
 app.use(express.static(path.join(__dirname, 'public')));

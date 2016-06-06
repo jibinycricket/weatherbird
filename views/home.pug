@@ -1,5 +1,3 @@
 include partials/head.pug
-
-h1#test this is the homepage
-h2 #{process.env.FORECAST_APIKEY}
-button(onClick=getWeather(#{process.env.FORECAST_APIKEY}));
+Body
+  include partials/weatherapp.pug
