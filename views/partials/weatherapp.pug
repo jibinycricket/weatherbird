@@ -1,28 +1,43 @@
 .weatherapp
-  .location-row
-    .add-button
-      i.fa.fa-plus
-    .location-and-date
-      span.location NEW HYDE PARK, NY
-      span.date Monday, May 20
-    .geolocation-button(onclick="getWeather()")
-      i.fa.fa-map-marker
-  .current-weather-row
-    .current-weather
-      .current-weather-icon
-        img(src="/images/weather-icons/weather-clear-day.svg")
-      span.current-temp 85°
-      .high-and-low-temp
-        span.high-temp 87°
-        |/
-        span.low-temp 72°
-    
+  .upper-half
+    .location-row
+      .add-button
+        i.fa.fa-plus
+      .location-and-date
+        span.location NEW HYDE PARK, NY
+        span.date Monday, May 20
+      .geolocation-button(onclick="getWeather()")
+        i.fa.fa-map-marker
+    .current-weather-row
+      .current-weather
+        .current-weather-icon
+          img(src="/images/weather-icons/weather-clear-day.svg")
+        span.current-temp 85°
+        .high-and-low-temp
+          span.high-temp 87°
+          |/
+          span.low-temp 72°
+      .toggle-view-button
+        |>
+  .lower-half
+    .daily-weather-header-row
+      span.daily-title DAILY
+      span.show-more-days 
+        |7 Days 
+        sup
+          i.fa.fa-expand
+    .daily-weather-row
+      -for(var x = 1; x< 5; x++)
+        .day
+          span.daily-name MON
+          span.daily-weather-icon
+            img(src="/images/weather-icons/weather-clear-day.svg")
+          span.daily-high-temp 75°
+          |/
+          span.daily-low-temp 68°
 
-  .daily-weather-row
-    span.daily-title DAILY
-    span.show-more-days 
-      |7 Days 
-      i.fa.fa-expand
+
+
 
 
 

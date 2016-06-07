@@ -1,88 +1,112 @@
 .weatherapp
-  border: 1px solid red
   margin: 0 auto
-  padding: 20px
-  height: 500px
-  width: 320px
-  .location-row
-    text-align: center
-    margin-top: 10px
-    .add-button
-      height: 30px
-      width: 30px
-      float: left
-      padding: 0px
-      opacity: .9
-      border: 2px solid white
-      color: white
-      border-radius: 100%
-      i
-        margin-top: 8px
-    .location-and-date
-      opacity: .88
-      color: white
-      display: inline-block
-      .location
-        font-size: 20px
-        display: block
-      .location
-        font-size: 18px
-        display: block
-    .geolocation-button
-      border: 2px solid white
-      opacity: .9
-      color: white
-      display: inline-block
-      float: right
-      cursor: pointer
-      height: 30px
-      width: 30px
-      padding: 0px
-      border-radius: 100%
-      &:hover
-        background-color: rgba(white, .2)
-      i
-        font-size: 20px
-        margin-top: 5px
-  .current-weather-row
-    .current-weather
-      border: 1px solid blue
-      color: white
-      opacity: .8
-      width: 70%
-      padding-left: 45px
-      float: left
-      .current-weather-icon
-        text-align: center
-        margin-top: 10px
-        img
-          width: 200px
-          height: 200px
-          border-radius: 100%
-      .current-temp
-        margin: 0px
-        position: relative
+  width: 330px
+  .upper-half
+    margin: 10px
+    .location-row
+      text-align: center
+      margin-top: 10px
+      .add-button
+        height: 30px
+        width: 30px
+        float: left
         padding: 0px
-        font-size: 60px
-        font-weight: 600
-        font-style: bold;
+        opacity: .9
+        border: 2px solid white
+        color: white
+        border-radius: 100%
+        i
+          margin-top: 8px
+      .location-and-date
+        opacity: .88
+        color: white
+        display: inline-block
+        .location
+          font-size: 20px
+          display: block
+        .location
+          font-size: 18px
+          display: block
+      .geolocation-button
+        border: 2px solid white
+        opacity: .9
+        color: white
+        display: inline-block
+        float: right
+        cursor: pointer
+        height: 30px
+        width: 30px
+        padding: 0px
+        border-radius: 100%
+        &:hover
+          background-color: rgba(white, .2)
+        i
+          font-size: 20px
+          margin-top: 5px
+    .current-weather-row
+      .current-weather
+        color: white
+        opacity: .8
+        width: 70%
+        padding-left: 45px
+        display: inline-block;
+        .current-weather-icon
+          text-align: center
+          margin-top: 10px
+          img
+            width: 200px
+            height: 200px
+            border-radius: 100%
+        .current-temp
+          margin: 0px
+          position: relative
+          padding: 0px
+          font-size: 60px
+          font-weight: 600
+          font-style: bold
+          text-align: center
+          display: block
+        .high-and-low-temp
+          margin: 0px
+          font-size: 35px
+          font-weight: 400
+          text-align: center
+          .high-temp
+          .low-temp
+      .toggle-view-button
+        position: relative
+        font-size: 110px
+        color: #a4add3
+        top: -110px
+        display: inline-block
+  .lower-half
+    background-color: #4E62AD
+    .daily-weather-header-row
+      padding: 10px
+      clear: both
+      color: white
+      .daily-title
+        font-size: 20px
+      .show-more-days
+        float: right
+        padding-top: 3px
+        font-size: 12px
+    .daily-weather-row
+      color: white
+      padding: 10px
+      display: flex
+      .day
+        border-left: 1px solid white
+        flex: 1
         text-align: center
-        display: block
-      .high-and-low-temp
-        margin: 0px
-        font-size: 35px
-        font-weight: 400
-        text-align: center
-        .high-temp
-        .low-temp
-    .toggle-view-button
-      border: 1px solid green
-      position: relative
-      font-size: 110px
-      color: #a4add3
-      float: right
-      position: relative
-      top: 100px
-  
+        .daily-name
+          display: block
+        .daily-weather-icon
+          display: block
+          img
+            width: 50px
+        .day-temps
+
+
 
 
