@@ -1,4 +1,5 @@
 .weatherapp
+  border: 1px solid red
   margin: 0 auto
   padding: 20px
   height: 500px
@@ -43,24 +44,45 @@
       i
         font-size: 20px
         margin-top: 5px
-  .current-weather
-    color: white
-    opacity: .8
-    .current-weather-icon
-      text-align: center
-      margin-top: 10px
-      img
-        width: 200px
-        height: 200px
-        border-radius: 100%
-    .current-temp
+  .current-weather-row
+    .current-weather
+      border: 1px solid blue
+      color: white
+      opacity: .8
+      width: 70%
+      padding-left: 45px
+      float: left
+      .current-weather-icon
+        text-align: center
+        margin-top: 10px
+        img
+          width: 200px
+          height: 200px
+          border-radius: 100%
+      .current-temp
+        margin: 0px
+        position: relative
+        padding: 0px
+        font-size: 60px
+        font-weight: 600
+        font-style: bold;
+        text-align: center
+        display: block
+      .high-and-low-temp
+        margin: 0px
+        font-size: 35px
+        font-weight: 400
+        text-align: center
+        .high-temp
+        .low-temp
+    .toggle-view-button
+      border: 1px solid green
       position: relative
-      top: -30px
-      padding: 0px
-      font-size: 50px
-      font-weight: 600
-      text-align: center
-      display: block
-    .high-temp
-    .low-temp
+      font-size: 110px
+      color: #a4add3
+      float: right
+      position: relative
+      top: 100px
+  
+
 

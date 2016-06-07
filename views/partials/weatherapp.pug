@@ -7,11 +7,22 @@
       span.date Monday, May 20
     .geolocation-button(onclick="getWeather()")
       i.fa.fa-map-marker
-  .current-weather
-    .current-weather-icon
-      img(src="/images/weather-icons/weather-clear-day.svg")
-    span.current-temp 85°
-    span.high-temp 87°
-    span.low-temp 72°
+  .current-weather-row
+    .current-weather
+      .current-weather-icon
+        img(src="/images/weather-icons/weather-clear-day.svg")
+      span.current-temp 85°
+      .high-and-low-temp
+        span.high-temp 87°
+        |/
+        span.low-temp 72°
+    
 
-    p wind
+  .daily-weather-row
+    span.daily-title DAILY
+    span.show-more-days 
+      |7 Days 
+      i.fa.fa-expand
+
+
+
