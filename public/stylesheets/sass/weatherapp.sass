@@ -87,7 +87,7 @@
     width: 320px
     margin: 0 auto
     .daily-weather-header-row
-      padding: 10px
+      padding: 10px 0px
       clear: both
       color: white
       .daily-title
@@ -101,14 +101,14 @@
       color: white
       display: flex
       .day
-        font-size: 
         border-left: 1px solid rgba(white, .2)
         flex: 1
         text-align: center
         &:nth-child(1)
           border: none
         .daily-name
-          font-size: 14px
+          font-size: 12px
+          text-align: left
           display: block
         .daily-weather-icon
           display: block
@@ -122,7 +122,8 @@
       opacity: .3
       background-color: white
     .hourly-weather-header-row
-      padding: 10px
+      padding: 10px 0px
+      border: 1px solid red
       clear: both
       color: white
       .hourly-title
@@ -133,10 +134,11 @@
         font-size: 14px
     .hourly-weather-row
       .hour
-        width: 300px
+        width: 320px
         margin: 0 auto
         color: white
         .hour-column-label-row
+          font-weight: 600
           th
             font-size: 14px
           .time-head
