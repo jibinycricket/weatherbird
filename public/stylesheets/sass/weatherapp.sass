@@ -80,6 +80,7 @@
         top: -110px
         display: inline-block
 .lower-half
+  padding: 10px 0px
   background-color: #4E62AD
   min-width: 320px
   .lower-half-container
@@ -98,13 +99,14 @@
     .daily-weather-row
       font-size: 12px
       color: white
-      padding: 10px
       display: flex
       .day
         font-size: 
-        border-left: 1px solid white
+        border-left: 1px solid rgba(white, .2)
         flex: 1
         text-align: center
+        &:nth-child(1)
+          border: none
         .daily-name
           font-size: 14px
           display: block
@@ -115,9 +117,51 @@
         .day-temps
           font-size: 16px
     .daily-hourly-break
+      margin: 15px 0px
       height: 3px
-      opacity: .5
+      opacity: .3
       background-color: white
+    .hourly-weather-header-row
+      padding: 10px
+      clear: both
+      color: white
+      .hourly-title
+        font-size: 16px
+      .show-more-hours
+        float: right
+        padding-top: 3px
+        font-size: 14px
+    .hourly-weather-row
+      .hour
+        width: 300px
+        margin: 0 auto
+        color: white
+        .hour-column-label-row
+          th
+            font-size: 14px
+          .time-head
+            text-align: left
+          .temp-head
+            text-align: center
+          .precip-head
+            text-align: center
+          .wind-head
+            width: 30%
+            text-align: right
+        .hour-row
+          td
+            padding: 5px 0px
+            font-size: 18px
+            font-weight: 600
+          .time
+            text-align: left
+          .temp
+            text-align: center
+          .precip
+            text-align: center
+          .wind
+            text-align: right
+
 
 
 

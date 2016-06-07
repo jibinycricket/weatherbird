@@ -35,9 +35,31 @@
             img(src="/images/weather-icons/weather-clear-day.svg")
           .day-temps
             span.daily-high-temp 75°
-            |/
+            |/ 
             span.daily-low-temp 68°
     .daily-hourly-break
+    .hourly-weather-header-row
+      span.hourly-title HOURLY
+      span.show-more-hours
+        |48 hours
+        sup
+          i.fa.fa-expand
+    .hourly-weather-row
+      table.hour
+        thead
+          tr.hour-column-label-row
+            th.time-head TIME
+            th.temp-head TEMP
+            th.precip-head PRECIP
+            th.wind-head WIND
+        -for(var i = 1; i < 8; i++)
+          tr.hour-row
+            td.time #{i} AM
+            td.temp 75°
+            td.precip 0%
+            td.wind  S #{Math.floor(Math.random() * 15) + 1} MPH
+
+
 
 
 
