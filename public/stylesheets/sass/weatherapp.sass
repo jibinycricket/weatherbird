@@ -1,3 +1,5 @@
+$toggle-view: #a4add3
+
 .weatherapp
   margin: 0 auto
   width: 480px
@@ -43,6 +45,7 @@
           font-size: 20px
           margin-top: 5px
     .current-weather-row-condensed
+      display: none
       .current-weather
         width: 390px
         padding-left: 36px
@@ -75,33 +78,83 @@
         width: 44px
         position: relative
         font-size: 110px
-        color: #a4add3
+        color: $toggle-view
         top: -110px
         display: inline-block
     .current-weather-row-expanded
-      display: none
       .current-weather
-        text-align: center
-        border: 1px solid blue
+        position: relative
+        //border: 1px solid blue
+        padding: 0px 30px
         .toggle-view-button
-          border: 1px solid red
-          width: 40px
-          font-size: 100px
-          display: inline-block
+          color: #a4add3
+          //border: 1px solid red
+          font-size: 140px
+          float: left
         .current-weather-icon
-          border: 1px solid purple
-          width: 150px
+          //border: 1px solid purple
+          margin-left: 10px
           display: inline-block
           line-height: 1px
+          width: 200px
           img
             vertical-align: middle
         .current-weather-description
-          border: 1px solid orange
-          width: 50px
-          display: inline-block
+          position: absolute
+          top: 0px
+          left: 290px
+          margin-top: 40px
+          //border: 1px solid orange
+          float: right
+          z-index: 2
+          .main
+            font-size: 60px
+            font-weight: 600
+            color: rgba(white, .8)
+          .sub
+            font-size: 24px
+            color: rgba(white, .8)
+        br
+          clear: both
       .current-weather-stats
-        border: 1px solid pink
-        height: 200px 
+        //border: 1px solid purple
+        padding: 0px 20px 0px 20px
+        color: rgba(white, .7)
+        position: relative
+        height: 190px
+        .temps
+          position: relative
+          //border: 1px solid blue
+          float: left
+          height: 100%
+          width: 155px
+          font-size: 18px
+          sup
+            color: rgba(white,.7)
+            font-size: 12px
+          .current-temp
+            font-size: 80px
+          .high-temp, .low-temp
+            font-size: 25px
+        .other-stats
+          //border: 1px solid red
+          width: 260px
+          float: right
+          .stat-row
+            div
+              display: table-cell
+              vertical-align: middle
+            .icon
+              width: 50px
+              //border: 1px solid green
+            .label
+              width: 120px
+              //border: 1px solid blue
+              text-align: left
+            .value
+              width: 80px
+              //border: 1px solid pink
+              text-align: right
 .lower-half
   margin: 0 auto
   padding: 10px 0px

@@ -29,8 +29,39 @@
             span.main Sunny
             br
             span.sub with clouds
+        br
       .current-weather-stats
-
+        .temps
+          |NOW
+          br
+          .current-temp 105°
+          .high-temp
+            sup HIGH 
+            |105°
+          .low-temp 
+            sup LOW 
+            |105°
+        .other-stats
+          .wind-row.stat-row
+            .icon
+              img(src="images/weather-icons/stats-precipitation.svg")
+            .label WIND
+            .value SE 7 MPH
+          .humidity-row.stat-row
+            .icon
+              img(src="images/weather-icons/stats-precipitation.svg")
+            .label HUMIDITY
+            .value 45%
+          .pressure-row.stat-row
+            .icon
+              img(src="images/weather-icons/stats-precipitation.svg")
+            .label PRESSURE
+            .value 29.95 IN
+          .precipitation-row.stat-row
+            .icon
+              img(src="images/weather-icons/stats-precipitation.svg")
+            .label PRECIPITATION
+            .value 6 HIGH
 .lower-half
   .lower-half-container
     .daily-weather-header-row
