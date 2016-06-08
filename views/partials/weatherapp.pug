@@ -8,7 +8,7 @@
         span.date Monday, May 20
       .geolocation-button(onclick="getWeather()")
         i.fa.fa-map-marker
-    .current-weather-row
+    .current-weather-row-condensed
       .current-weather
         .current-weather-icon
           img(src="/images/weather-icons/weather-clear-day.svg")
@@ -19,6 +19,18 @@
           span.low-temp 72°
       .toggle-view-button
         |>
+    .current-weather-row-expanded
+      .current-weather
+        .toggle-view-button <
+        .current-weather-icon
+          img(src="/images/weather-icons/weather-clear-day.svg")
+        .current-weather-description
+          .description
+            span.main Sunny
+            br
+            span.sub with clouds
+      .current-weather-stats
+
 .lower-half
   .lower-half-container
     .daily-weather-header-row

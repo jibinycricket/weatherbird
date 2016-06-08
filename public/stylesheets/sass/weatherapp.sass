@@ -1,8 +1,7 @@
 .weatherapp
   margin: 0 auto
-  width: 320px
+  width: 480px
   .upper-half
-    margin: 10px
     .location-row
       text-align: center
       margin-top: 10px
@@ -43,12 +42,11 @@
         i
           font-size: 20px
           margin-top: 5px
-    .current-weather-row
+    .current-weather-row-condensed
       .current-weather
-        color: white
-        opacity: .8
-        width: 70%
-        padding-left: 45px
+        width: 390px
+        padding-left: 36px
+        color: rgba(white, .8)
         display: inline-block;
         .current-weather-icon
           text-align: center
@@ -74,17 +72,44 @@
           .high-temp
           .low-temp
       .toggle-view-button
+        width: 44px
         position: relative
         font-size: 110px
         color: #a4add3
         top: -110px
         display: inline-block
+    .current-weather-row-expanded
+      display: none
+      .current-weather
+        text-align: center
+        border: 1px solid blue
+        .toggle-view-button
+          border: 1px solid red
+          width: 40px
+          font-size: 100px
+          display: inline-block
+        .current-weather-icon
+          border: 1px solid purple
+          width: 150px
+          display: inline-block
+          line-height: 1px
+          img
+            vertical-align: middle
+        .current-weather-description
+          border: 1px solid orange
+          width: 50px
+          display: inline-block
+      .current-weather-stats
+        border: 1px solid pink
+        height: 200px 
 .lower-half
+  margin: 0 auto
   padding: 10px 0px
   background-color: #4E62AD
-  min-width: 320px
+  min-width: 480px
   .lower-half-container
-    width: 320px
+    width: 480px
+    max-width: 720px
     margin: 0 auto
     .daily-weather-header-row
       padding: 10px 0px
@@ -123,7 +148,6 @@
       background-color: white
     .hourly-weather-header-row
       padding: 10px 0px
-      border: 1px solid red
       clear: both
       color: white
       .hourly-title
@@ -134,7 +158,7 @@
         font-size: 14px
     .hourly-weather-row
       .hour
-        width: 320px
+        width: 480px
         margin: 0 auto
         color: white
         .hour-column-label-row
