@@ -70,7 +70,6 @@ function currentWeatherData(data){
   currentData.humidity = data.currently.humidity;
   currentData.pressure = data.currently.pressure;
   currentData.visibility = data.currently.visibility;
-  console.log(currentData);
 }
 
 function hourlyWeatherData(data){
@@ -83,7 +82,6 @@ function hourlyWeatherData(data){
     hourlyData[i].windSpeed = data.hourly.data[i].windSpeed;
     hourlyData[i].windDirection = data.hourly.data[i].windDirection;
   }
-  console.log(data);
 }
 
 function weekWeatherData(data){
