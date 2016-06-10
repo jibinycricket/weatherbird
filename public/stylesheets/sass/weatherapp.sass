@@ -45,7 +45,8 @@ $toggle-view: #a4add3
           font-size: 20px
           margin-top: 5px
     .current-weather-row-condensed
-      display: none
+      //display: none
+      clear: both
       .current-weather
         width: 390px
         padding-left: 36px
@@ -72,6 +73,7 @@ $toggle-view: #a4add3
           font-size: 28px
           font-weight: 400
           text-align: center
+          padding-bottom: 20px
           .high-temp
           .low-temp
       .toggle-view-button
@@ -81,7 +83,10 @@ $toggle-view: #a4add3
         color: $toggle-view
         top: -110px
         display: inline-block
+        display: none
     .current-weather-row-expanded
+      clear: both
+      display: none
       .current-weather
         position: relative
         //border: 1px solid blue
@@ -180,6 +185,7 @@ $toggle-view: #a4add3
       color: white
       display: flex
       .day
+        padding-left: 5px
         border-left: 1px solid rgba(white, .2)
         flex: 1
         text-align: center

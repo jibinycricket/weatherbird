@@ -4,6 +4,7 @@ var revGeoAPIKEY = "AIzaSyAbKLKTekvZk6cHzvr8fQbZJi0vfpZhKEQ";
 //Trigger
 function getWeather(){
   getGeoLocation();
+  console.log('Getting Weather');
 }
 //Get Current Location Data
 function getGeoLocation(){
@@ -35,6 +36,8 @@ function getReverseLocationJSON(url){
     dataType: "json",
     url: url,
     success: function(data){
+      displayLocation(data.results[2]);
+      displayDate();
     }
   });
 }
@@ -55,6 +58,10 @@ function getWeatherJSON(url){
       var currentWeatherArray = currentWeatherData(data);
       var weekWeatherArray = weekWeatherData(data);
       var hourlyWeatherArray = hourlyWeatherData(data);
+
+      displayCurrentWeather(currentWeatherArray);
+      displayDailyWeather(weekWeatherArray);
+      displayHourlyWeather(hourlyWeatherArray);
     }
   });
 }
@@ -62,14 +69,16 @@ function getWeatherJSON(url){
 function currentWeatherData(data){
   var currentData = {};
   currentData.icon = data.currently.icon;
-  currentData.currentTemp = data.currently.apparentTemperature;
-  currentData.highTemp = data.daily.data[0].apparentTemperatureMax;
-  currentData.lowTemp = data.daily.data[0].apparentTemperatureMin;
+  currentData.currentTemp = Math.round(data.currently.apparentTemperature);
+  currentData.highTemp = Math.round(data.daily.data[0].apparentTemperatureMax);
+  currentData.lowTemp = Math.round(data.daily.data[0].apparentTemperatureMin);
   currentData.windSpeed = data.currently.windSpeed;
   currentData.windDirection = data.currently.windBearing;
   currentData.humidity = data.currently.humidity;
   currentData.pressure = data.currently.pressure;
   currentData.visibility = data.currently.visibility;
+
+  return currentData;
 }
 
 function hourlyWeatherData(data){
@@ -77,21 +86,27 @@ function hourlyWeatherData(data){
   for(var i = 0; i< 49; i++){
     hourlyData[i] = {};
     hourlyData[i].time = data.hourly.data[i].time;
-    hourlyData[i].hourTemp = data.hourly.data[i].apparentTemperature;
+    hourlyData[i].hourTemp = Math.round(data.hourly.data[i].apparentTemperature);
     hourlyData[i].precipProb = data.hourly.data[i].precipProbability;
     hourlyData[i].windSpeed = data.hourly.data[i].windSpeed;
-    hourlyData[i].windDirection = data.hourly.data[i].windDirection;
+    hourlyData[i].windDirection = data.hourly.data[i].windBearing;
+    console.log(hourlyData[i].windDirection);
   }
+
+  return hourlyData;
 }
 
 function weekWeatherData(data){
   var weekData = [];
   for(var i = 1; i<8; i++){
     weekData[i] = {};
+    weekData[i].time = data.daily.data[i].time;
     weekData[i].icon = data.daily.data[i].icon;
-    weekData[i].highTemp = data.daily.data[i].apparentTemperatureMax;
-    weekData[i].lowTemp = data.daily.data[i].apparentTemperatureMin;
+    weekData[i].highTemp = Math.round(data.daily.data[i].apparentTemperatureMax);
+    weekData[i].lowTemp = Math.round(data.daily.data[i].apparentTemperatureMin);
   }
+
+  return weekData;
 }
 
 

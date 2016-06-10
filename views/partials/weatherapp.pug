@@ -4,19 +4,18 @@
       .add-button
         i.fa.fa-plus
       .location-and-date
-        span.location NEW HYDE PARK, NY
-        span.date Monday, May 20
+        span.location
+        span.date
       .geolocation-button(onclick="getWeather()")
         i.fa.fa-map-marker
     .current-weather-row-condensed
       .current-weather
         .current-weather-icon
-          img(src="/images/weather-icons/weather-clear-day.svg")
-        span.current-temp 85°
+        span.current-temp
         .high-and-low-temp
-          span.high-temp 87°
+          span.high-temp
           |/
-          span.low-temp 72°
+          span.low-temp
       .toggle-view-button
         |>
     .current-weather-row-expanded
@@ -71,15 +70,14 @@
         sup
           i.fa.fa-expand
     .daily-weather-row
-      -for(var x = 1; x< 6; x++)
-        .day
-          span.daily-name MON
+      each val in [1,2,3,4,5]
+        div(class="day "+"day-"+val)
+          span.daily-name
           span.daily-weather-icon
-            img(src="/images/weather-icons/weather-clear-day.svg")
           .day-temps
-            span.daily-high-temp 75°
+            span.daily-high-temp
             |/ 
-            span.daily-low-temp 68°
+            span.daily-low-temp
     .daily-hourly-break
     .hourly-weather-header-row
       span.hourly-title HOURLY
@@ -95,12 +93,14 @@
             th.temp-head TEMP
             th.precip-head PRECIP
             th.wind-head WIND
-        -for(var i = 1; i < 8; i++)
-          tr.hour-row
-            td.time #{i} AM
-            td.temp 75°
-            td.precip 0%
-            td.wind  S #{Math.floor(Math.random() * 15) + 1} MPH
+        - val = 1
+        while val < 13
+          tr(class="hour-row "+ "hour-"+val+"-row")
+            td.time
+            td.temp
+            td.precip
+            td.wind
+          -val++
 
 
 
