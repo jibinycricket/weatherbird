@@ -1,6 +1,10 @@
 var weatherAPIKEY = "2ebc8b5047823a6fbe879e5bc62a4462";
 var revGeoAPIKEY = "AIzaSyAbKLKTekvZk6cHzvr8fQbZJi0vfpZhKEQ";
 
+$(document).ready(function(){
+  getWeather();
+});
+
 //Trigger
 function getWeather(){
   getGeoLocation();

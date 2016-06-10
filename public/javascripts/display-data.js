@@ -54,7 +54,7 @@ function displayHourlyWeather(data){
     console.log(data);
     $(hourRow+" .hour-"+i+"-row .time").html(hourToString(data[i].time));
     $(hourRow+" .hour-"+i+"-row .temp").html(data[i].hourTemp+"°");
-    $(hourRow+" .hour-"+i+"-row .precip").html(data[i].precipProb +" %");
+    $(hourRow+" .hour-"+i+"-row .precip").html((data[i].precipProb)*100 +" %");
     $(hourRow+" .hour-"+i+"-row .wind").html(getWindDirection(data[i].windDirection) + data[i].windSpeed + " MPH");
   }
 }
