@@ -16,13 +16,13 @@
           span.high-temp
           |/
           span.low-temp
-      .toggle-view-button
+      .toggle-view-button(onclick="toggleView()")
         |>
     .current-weather-row-expanded
       .current-weather
-        .toggle-view-button <
+        .toggle-view-button(onclick="toggleView()")
+          |<
         .current-weather-icon
-          img(src="/images/weather-icons/weather-clear-day.svg")
         .current-weather-description
           .description
             span.main Sunny
@@ -36,10 +36,10 @@
           .current-temp 105°
           .high-temp
             sup HIGH 
-            |105°
+            span.value
           .low-temp 
             sup LOW 
-            |105°
+            span.value
         .other-stats
           .wind-row.stat-row
             .icon

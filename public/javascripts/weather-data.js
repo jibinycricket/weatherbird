@@ -80,8 +80,7 @@ function currentWeatherData(data){
   currentData.windDirection = data.currently.windBearing;
   currentData.humidity = data.currently.humidity;
   currentData.pressure = data.currently.pressure;
-  currentData.visibility = data.currently.visibility;
-
+  currentData.precipProb = data.currently.precipProbability;
   return currentData;
 }
 

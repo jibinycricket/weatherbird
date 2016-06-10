@@ -98,7 +98,25 @@ function getWeatherIcon(icon){
     "partly-cloudy-night":iconDirectory+"weather-partly-cloudy-night.svg",
     "thunderstorm":iconDirectory+"weather-thunderstorm.svg"
   };
+
   return weatherIcons[icon];
+}
+
+function getWeatherDescription(icon){
+   var weatherDescription = {
+    "clear-day":["SUNNY","have a nice day"],
+    "clear-night":["CLEAR","enjoy the view"],
+    "rain":["RAIN","bring an umbrella"],
+    "snow":["SNOW","bring a coat"],
+    "sleet":["SLEET","a wintry mix"],
+    "wind":["WINDY","don't get blown away"],
+    "fog":["FOGGY","low visibility"],
+    "cloudy":["CLOUDY", "goodbye sun"],
+    "partly-cloudy-day":["SUNNY", "with clouds"],
+    "partly-cloudy-night":["CLEAR", "with some clouds"],
+    "thunderstorm":["STORMY","relax at home"]
+  };
+  return weatherDescription[icon];
 }
 
 function getWindDirection(degrees){

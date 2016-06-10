@@ -1,5 +1,29 @@
+function toggleView(){
+  var condensedStatus = $(".upper-half .current-weather-row-condensed").css("display");
+  var expanded = $(".upper-half .current-weather-row-expanded");
+  var condensed = $(".upper-half .current-weather-row-condensed");
+    console.log('hello');
+  if(condensedStatus == "none"){
+    $(expanded).fadeOut("fast", function(){
+      $(expanded).css("display","none");
+      $(condensed).fadeIn("fast", function(){
+        $(condensed).css("display","inline");
+      });
+    });
+    
+  }else{
+    $(condensed).fadeOut("fast", function(){
+      condensed.css("display","none");
+      $(expanded).fadeIn("fast", function(){
+        $(expanded).css("display","inline");
+      });
+    });
+    
+  }
+}
+
+
 function displayLocation(data){
-  console.log(data);
   var cityData = data.address_components[1].long_name;
   var stateData = data.address_components[2].short_name;
   var location = ".location-row .location-and-date .location";
@@ -19,16 +43,37 @@ function displayDate(){
 }
 
 function displayCurrentWeather(data){
-  var section = ".upper-half .current-weather"
+  var currentWeatherSection = ".upper-half .current-weather"
+  var currentWeatherStatsSection = ".upper-half .current-weather-row-expanded .current-weather-stats"
   //====Condensed====//
   //Show Current Weather Icon
-  $(section+" .current-weather-icon").html("<img src = "+getWeatherIcon(data.icon)+">");
+  $(currentWeatherSection+" .current-weather-icon").html("<img src = "+getWeatherIcon(data.icon)+">");
   //Show Current Temp
-  $(section+" .current-temp").html(data.currentTemp+'°');
+  $(currentWeatherSection+" .current-temp").html(data.currentTemp+'°');
   //Show High Temp
-  $(section+" .high-temp").html(data.highTemp+'°');
+  $(currentWeatherSection+" .high-temp").html(data.highTemp+'°');
   //Show Low Temp
-  $(section+" .low-temp").html(data.lowTemp+'°');
+  $(currentWeatherSection+" .low-temp").html(data.lowTemp+'°');
+
+  //====Expanded====//
+  //Show Current Weather Description
+  var description = getWeatherDescription(data.icon);
+  $(currentWeatherSection+" .current-weather-description .description .main").html(description[0]);
+  $(currentWeatherSection+" .current-weather-description .description .sub").html(description[1]);
+  //Show Current Temp
+  $(currentWeatherStatsSection + " .temps .current-temp").html(data.currentTemp+'°');
+  //Show High Temp
+  $(currentWeatherStatsSection + " .temps .high-temp .value").html(data.highTemp+'°');
+  //Show Low Temp
+  $(currentWeatherStatsSection + " .temps .low-temp .value").html(data.lowTemp+'°');
+  //Show WindSpeed
+  $(currentWeatherStatsSection + " .other-stats .wind-row .value").html(/*getWindDirection(data.windDirection) +*/ data.windSpeed + " mph")
+  //Show Humidity
+  $(currentWeatherStatsSection + " .other-stats .humidity-row .value").html(data.humidity*100 + "%");
+  //Show Pressure
+  $(currentWeatherStatsSection + " .other-stats .pressure-row .value").html(Math.round(data.pressure*0.0295301)+" in");
+  //Show Precipitation
+  $(currentWeatherStatsSection + " .other-stats .precipitation-row .value").html(data.precipProb*100+"%");  
 }
 
 function displayDailyWeather(data){
@@ -55,6 +100,6 @@ function displayHourlyWeather(data){
     $(hourRow+" .hour-"+i+"-row .time").html(hourToString(data[i].time));
     $(hourRow+" .hour-"+i+"-row .temp").html(data[i].hourTemp+"°");
     $(hourRow+" .hour-"+i+"-row .precip").html((data[i].precipProb)*100 +" %");
-    $(hourRow+" .hour-"+i+"-row .wind").html(getWindDirection(data[i].windDirection) + data[i].windSpeed + " MPH");
+    $(hourRow+" .hour-"+i+"-row .wind").html(getWindDirection(data[i].windDirection) + Math.round(data[i].windSpeed) + " mph");
   }
 }
