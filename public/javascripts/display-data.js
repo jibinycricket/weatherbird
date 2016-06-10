@@ -69,7 +69,7 @@ function displayCurrentWeather(data){
   //Show WindSpeed
   $(currentWeatherStatsSection + " .other-stats .wind-row .value").html(/*getWindDirection(data.windDirection) +*/ data.windSpeed + " mph")
   //Show Humidity
-  $(currentWeatherStatsSection + " .other-stats .humidity-row .value").html(data.humidity*100 + "%");
+  $(currentWeatherStatsSection + " .other-stats .humidity-row .value").html(Math.round(data.humidity*100) + "%");
   //Show Pressure
   $(currentWeatherStatsSection + " .other-stats .pressure-row .value").html(Math.round(data.pressure*0.0295301)+" in");
   //Show Precipitation
