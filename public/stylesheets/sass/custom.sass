@@ -3,6 +3,36 @@ $background-color: #ecf0f1
 $gradient-1-base: rgba(70,187,173,1)
 $gradient-1: top, rgba(70,187,173,1) 0%, rgba(84,145,183,1) 30%, rgba(84,145,183,1) 62%, rgba(84,145,183,1) 71%, rgba(88,120,185,1) 87%, rgba(88,120,185,1) 100%
 
+/*==== Fonts ====*/
+@font-face
+  font-family: dinMedium
+  src: url('stylesheets/fonts/DINOT Medium.otf')
+
+@font-face
+  font-family: din
+  src: url('stylesheets/fonts/DINOT.otf')
+
+@font-face
+  font-family: dinProBlack
+  src: url('stylesheets/fonts/DINOT Black.otf')
+
+@font-face
+  font-family: dinProBold
+  src: url('stylesheets/fonts/DINOT Bold.otf')
+
+@font-face
+  font-family: dinProLight
+  src: url('stylesheets/fonts/DINOT Light.otf')
+
+@font-face
+  font-family: dinProMedium
+  src: url('stylesheets/fonts/DINOT Medium.otf')
+
+@font-face
+  font-family: dinProRegular
+  src: url('stylesheets/fonts/DINOT Regular.otf')
+
+
 =gradient($gradient, $gradient-base)
   background: $gradient-base
   background: -webkit-linear-gradient($gradient-1)
@@ -13,6 +43,6 @@ $gradient-1: top, rgba(70,187,173,1) 0%, rgba(84,145,183,1) 30%, rgba(84,145,183
 html 
   -webkit-text-size-adjust: none
 body
-  font-family: 'Cabin', sans-serif
+  font-family: dinMedium, sans-serif
   +gradient($gradient-1, $gradient-1-base)
   
