@@ -1,6 +1,7 @@
 function displayLocation(data){
-  var cityData = data.address_components[0].long_name;
-  var stateData = data.address_components[1].short_name;
+  console.log(data);
+  var cityData = data.address_components[1].long_name;
+  var stateData = data.address_components[2].short_name;
   var location = ".location-row .location-and-date .location";
   $(location).html(cityData+', '+stateData);
 }
@@ -51,7 +52,6 @@ function displayDailyWeather(data){
 function displayHourlyWeather(data){
   var hourRow = ".lower-half .lower-half-container .hourly-weather-row .hour";
   for(var i = 1; i < 13; i++){
-    console.log(data);
     $(hourRow+" .hour-"+i+"-row .time").html(hourToString(data[i].time));
     $(hourRow+" .hour-"+i+"-row .temp").html(data[i].hourTemp+"°");
     $(hourRow+" .hour-"+i+"-row .precip").html((data[i].precipProb)*100 +" %");

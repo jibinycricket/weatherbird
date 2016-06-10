@@ -94,7 +94,6 @@ function hourlyWeatherData(data){
     hourlyData[i].precipProb = data.hourly.data[i].precipProbability;
     hourlyData[i].windSpeed = data.hourly.data[i].windSpeed;
     hourlyData[i].windDirection = data.hourly.data[i].windBearing;
-    console.log(hourlyData[i].windDirection);
   }
 
   return hourlyData;
