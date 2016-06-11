@@ -1,2 +1,6 @@
 node_modules/
 public/images/weathericons.zip
+.sublime-project
+.sublime-workspace
+weatherapp.sublime-project
+weatherapp.sublime-workspace

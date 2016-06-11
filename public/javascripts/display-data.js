@@ -73,7 +73,7 @@ function displayCurrentWeather(data){
   //Show Pressure
   $(currentWeatherStatsSection + " .other-stats .pressure-row .value").html(Math.round(data.pressure*0.0295301)+" in");
   //Show Precipitation
-  $(currentWeatherStatsSection + " .other-stats .precipitation-row .value").html(data.precipProb*100+"%");  
+  $(currentWeatherStatsSection + " .other-stats .precipitation-row .value").html(Math.round(data.precipProb*100)+"%");  
 }
 
 function displayDailyWeather(data){
@@ -99,7 +99,7 @@ function displayHourlyWeather(data){
   for(var i = 1; i < 13; i++){
     $(hourRow+" .hour-"+i+"-row .time").html(hourToString(data[i].time));
     $(hourRow+" .hour-"+i+"-row .temp").html(data[i].hourTemp+"°");
-    $(hourRow+" .hour-"+i+"-row .precip").html((data[i].precipProb)*100 +" %");
+    $(hourRow+" .hour-"+i+"-row .precip").html(Math.round((data[i].precipProb)*100) +" %");
     $(hourRow+" .hour-"+i+"-row .wind").html(getWindDirection(data[i].windDirection) + Math.round(data[i].windSpeed) + " mph");
   }
 }
