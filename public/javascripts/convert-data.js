@@ -93,7 +93,7 @@ function getWeatherIcon(icon){
     "sleet":iconDirectory+"weather-sleet.svg",
     "wind":iconDirectory+"weather-wind.svg",
     "fog":iconDirectory+"weather-fog.svg",
-    "cloudy":iconDirectory+"weather-.svg",
+    "cloudy":iconDirectory+"weather-cloudy.svg",
     "partly-cloudy-day":iconDirectory+"weather-partly-cloudy-day.svg",
     "partly-cloudy-night":iconDirectory+"weather-partly-cloudy-night.svg",
     "thunderstorm":iconDirectory+"weather-thunderstorm.svg"
