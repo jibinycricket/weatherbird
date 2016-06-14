@@ -29,6 +29,7 @@ $toggle-view: #a4add3
           font-size: 20px
           display: block
         .date
+          padding-top: 10px
           font-size: 18px
           display: block
       .geolocation-button
@@ -48,27 +49,26 @@ $toggle-view: #a4add3
           font-size: 20px
           margin-top: 5px
     .current-weather-row-condensed
-      display: inline
       clear: both
       position: relative
+      display: inline-block
       .current-weather
-        width: 390px
-        padding-left: 36px
+        display: inline-block
+        width: 480px
         color: rgba(white, .8)
-        display: inline-block;
         .current-weather-icon
           text-align: center
           img
             margin: auto
             width: 250px
             height: 250px
+            margin-right: 30px
             border-radius: 100%
         .current-temp
           margin: 0px
           position: relative
           padding: 0px
           top: -40px
-          left: 15px
           font-size: 100px
           font-weight: 600
           font-style: bold
@@ -77,58 +77,52 @@ $toggle-view: #a4add3
         .high-and-low-temp
           position: relative
           top: -40px
-          left: 15px
           margin: 0px
           font-size: 40px
           font-weight: 400
           text-align: center
-          padding-bottom: 20px
-          .high-temp
-          .low-temp
-      .toggle-view-button
-        width: 44px
-        position: relative
-        font-size: 110px
-        color: $toggle-view
-        top: -183px
-        right: 30px
-        display: inline-block
-        //display: none
-        &:hover
-          color: white
-          cursor: pointer
+        .toggle-view-button
+          position: relative
+          bottom: 350px
+          left: 330px
+          color: $toggle-view
+          img
+            height: 200px
+            width: 200px
+            &:hover
+              cursor: pointer
     .current-weather-row-expanded
       clear: both
       display: none
       .current-weather
         position: relative
         //border: 1px solid blue
-        padding: 0px 30px
         .toggle-view-button
-          color: #a4add3
-          padding-top: 12px
+          position: absolute
           //border: 1px solid red
-          font-size: 110px
-          float: left
+          right: 330px
+          img
+            width: 200px
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
           &:hover
             color: white
             cursor: pointer
         .current-weather-icon
-          margin-left: 10px
+          margin-left: 90px
           display: inline-block
-          line-height: 1px
-          width: 200px
+          //border: 1px solid green
           img
             vertical-align: middle
             width: 200px
-            height: 200px
         .current-weather-description
           position: absolute
-          top: 0px
-          left: 290px
-          margin-top: 40px
+          margin-top: 50px
+          right: 30px
           //border: 1px solid orange
-          float: right
+          display: inline-block
           z-index: 2
           .main
             font-size: 45px

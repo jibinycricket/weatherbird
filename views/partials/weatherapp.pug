@@ -9,6 +9,7 @@
       .geolocation-button(onclick="getWeather()")
         i.fa.fa-map-marker
     .current-weather-row-condensed
+
       .current-weather
         .current-weather-icon
         span.current-temp
@@ -16,12 +17,12 @@
           span.high-temp
           | / 
           span.low-temp
-      .toggle-view-button(onclick="toggleView()")
-        |>
+        .toggle-view-button(onclick="toggleView()")
+          img(src="images/weather-icons/toggle.png" srcset="images/weather-icons/toggle.svg")
     .current-weather-row-expanded
       .current-weather
         .toggle-view-button(onclick="toggleView()")
-          |<
+          img(src="images/weather-icons/toggle.png" srcset="images/weather-icons/toggle.svg")
         .current-weather-icon
         .current-weather-description
           .description
