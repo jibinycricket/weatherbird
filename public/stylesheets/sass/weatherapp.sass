@@ -52,10 +52,12 @@ $toggle-view: #a4add3
       clear: both
       position: relative
       display: inline-block
+      width: 480px
       .current-weather
         display: inline-block
         width: 480px
         color: rgba(white, .8)
+        //border: 1px solid blue
         .current-weather-icon
           text-align: center
           img
@@ -82,13 +84,12 @@ $toggle-view: #a4add3
           font-weight: 400
           text-align: center
         .toggle-view-button
-          position: relative
-          bottom: 350px
-          left: 330px
-          color: $toggle-view
+          position: absolute
+          bottom: 60px
+          left: 300px
           img
-            height: 200px
-            width: 200px
+            height: 300px
+            width: 180px
             &:hover
               cursor: pointer
     .current-weather-row-expanded

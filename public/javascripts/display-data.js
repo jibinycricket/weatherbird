@@ -24,8 +24,8 @@ function toggleView(){
 
 
 function displayLocation(data){
-  var cityData = data.address_components[1].long_name;
-  var stateData = data.address_components[2].short_name;
+  var cityData = data.address_components[0].long_name;
+  var stateData = data.address_components[3].short_name;
   var location = ".location-row .location-and-date .location";
   $(location).html(cityData+', '+stateData);
 }

@@ -40,7 +40,8 @@ function getReverseLocationJSON(url){
     dataType: "json",
     url: url,
     success: function(data){
-      displayLocation(data.results[2]);
+      console.log(data);
+      displayLocation(data.results[1]);
       displayDate();
     }
   });
