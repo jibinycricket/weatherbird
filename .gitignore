@@ -4,3 +4,5 @@ public/images/weathericons.zip
 .sublime-workspace
 weatherapp.sublime-project
 weatherapp.sublime-workspace
+cert.pem
+key.pem
